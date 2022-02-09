@@ -33,6 +33,7 @@ body {
 /* Grid Container */
 
 .calculator-grid-container {
+  /* border: 1px solid #fff; */
   max-width: 350px;
   margin: 0 auto;
   display: grid;
@@ -41,10 +42,10 @@ body {
   grid-auto-rows: 100px, auto;
   grid-template-areas:
     'clear plusminus percentage divide'
-    'seven eight nine mutiply'
+    'seven eight nine multiple'
     'four five six minus'
     'one two three plus'
-    'zero zero point equals';
+    'item-zero item-zero point equals';
 }
 
 /* Grid Items */
@@ -59,7 +60,77 @@ body {
   aspect-ratio: 1/1;
 }
 
+/* Grid Areas for Items */
+
 .clear {
-  grid-column: 1;
-  grid-row: 1;
+  grid-area: clear;
+}
+
+.plusminus {
+  grid-area: plusminus;
+}
+
+.percentage {
+  grid-area: percentage;
+}
+
+.divide {
+  grid-area: divide;
+}
+
+.seven {
+  grid-area: seven;
+}
+
+.eight {
+  grid-area: eight;
+}
+
+.nine {
+  grid-area: nine;
+}
+
+.multiple {
+  grid-area: multiple;
+}
+
+.four {
+  grid-area: four;
+}
+
+.five {
+  grid-area: five;
+}
+
+.six {
+  grid-area: six;
+}
+
+.subtract {
+  grid-area: minus;
+}
+
+.one {
+  grid-area: one;
+}
+
+.two {
+  grid-area: two;
+}
+
+.three {
+  grid-area: three;
+}
+
+.item-zero {
+  grid-area: item-zero;
+  aspect-ratio: 2/1;
+}
+
+.point {
+  grid-area: point;
+}
+
+.equals {
+  grid-area: equals;
 }
