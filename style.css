@@ -1,0 +1,59 @@
+:root {
+  --bgclr-main: #8fbedf;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bgclr-main);
+  font-family: 'Balsamiq Sans';
+}
+
+/* Whole Container */
+
+.container {
+  width: 80%;
+  max-width: 900px;
+  margin: 0 auto;
+  border: #fff solid 1px;
+}
+
+.title {
+  color: #fff;
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* Grid Container */
+
+.calculator-grid-container {
+  max-width: 350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  grid-auto-rows: 100px, auto;
+}
+
+/* Grid Items */
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+  font-size: 2.5rem;
+  border: #fff solid 1px;
+  aspect-ratio: 1/1;
+}
+
+.clear {
+  grid-column: 1;
+  grid-row: 1;
+}
