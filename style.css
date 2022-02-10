@@ -44,13 +44,17 @@ button {
 }
 
 /* Calculator Display */
+.display-container {
+  border: solid 1px white;
+  margin: 0 15px;
+  padding: 10px;
+}
+
 .display {
   color: #fff;
   font-size: 2rem;
-  border: solid 1px white;
   text-align: right;
-  margin: 0 15px;
-  padding: 10px;
+  margin: 0;
 }
 
 /* Grid Container */
