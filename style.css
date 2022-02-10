@@ -86,80 +86,80 @@ button {
 
 /* Grid Areas for Items */
 
-#clear {
+#item-clear {
   grid-area: clear;
 }
 
-#plusminus {
+#item-plusminus {
   grid-area: plusminus;
 }
 
-#percent {
+#item-percent {
   grid-area: percentage;
 }
 
-#divide {
+#item-divide {
   grid-area: divide;
 }
 
-#seven {
+#item-seven {
   grid-area: seven;
 }
 
-#eight {
+#item-eight {
   grid-area: eight;
 }
 
-#nine {
+#item-nine {
   grid-area: nine;
 }
 
-#multiply {
+#item-multiply {
   grid-area: multiple;
 }
 
-#four {
+#item-four {
   grid-area: four;
 }
 
-#five {
+#item-five {
   grid-area: five;
 }
 
-#six {
+#item-six {
   grid-area: six;
 }
 
-#minus {
+#item-minus {
   grid-area: minus;
 }
 
-#one {
+#item-one {
   grid-area: one;
 }
 
-#two {
+#item-two {
   grid-area: two;
 }
 
-#three {
+#item-three {
   grid-area: three;
 }
 
-#plus {
+#item-plus {
   grid-area: plus;
 }
 
-#zero {
+#item-zero {
   grid-area: item-zero;
   aspect-ratio: 2/0.94;
 }
 
-#point {
+#item-point {
   grid-area: point;
 }
 
-#equals {
+#item-equals {
   grid-area: equals;
 }
 

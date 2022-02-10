@@ -30,3 +30,5 @@ console.log(operate('+', 5, 5));
 const displayText = document.querySelector('.display');
 
 // Number Buttons //
+const number_buttons = document.querySelectorAll('.number');
+console.log(number_buttons);
