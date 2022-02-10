@@ -86,76 +86,80 @@ button {
 
 /* Grid Areas for Items */
 
-.clear {
+#clear {
   grid-area: clear;
 }
 
-.plusminus {
+#plusminus {
   grid-area: plusminus;
 }
 
-.percentage {
+#percent {
   grid-area: percentage;
 }
 
-.divide {
+#divide {
   grid-area: divide;
 }
 
-.seven {
+#seven {
   grid-area: seven;
 }
 
-.eight {
+#eight {
   grid-area: eight;
 }
 
-.nine {
+#nine {
   grid-area: nine;
 }
 
-.multiple {
+#multiply {
   grid-area: multiple;
 }
 
-.four {
+#four {
   grid-area: four;
 }
 
-.five {
+#five {
   grid-area: five;
 }
 
-.six {
+#six {
   grid-area: six;
 }
 
-.subtract {
+#minus {
   grid-area: minus;
 }
 
-.one {
+#one {
   grid-area: one;
 }
 
-.two {
+#two {
   grid-area: two;
 }
 
-.three {
+#three {
   grid-area: three;
 }
 
-.item-zero {
+#plus {
+  grid-area: plus;
+}
+
+#zero {
   grid-area: item-zero;
   aspect-ratio: 2/0.94;
 }
 
-.point {
+#point {
   grid-area: point;
 }
 
-.equals {
+#equals {
   grid-area: equals;
 }
 

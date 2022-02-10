@@ -26,3 +26,7 @@ let operate = function(operator, a, b) {
 }
 
 console.log(operate('+', 5, 5));
+
+const displayText = document.querySelector('.display');
+
+// Number Buttons //
