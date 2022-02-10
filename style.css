@@ -36,7 +36,7 @@ button {
 .calculator-grid-container {
   /* border: 1px solid #fff; */
   max-width: 350px;
-  margin: 0 auto;
+  margin: 1em auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
@@ -54,7 +54,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: #fff solid 1px;
+  /* border: #fff solid 1px; */
   aspect-ratio: 1/1;
 }
 
@@ -135,9 +135,11 @@ button {
 
 button {
   display: block;
+  width: 100%;
+  height: 100%;
   color: #fff;
   font-size: 2.5rem;
-  border: none;
+  /* border: none; */
   background-color: var(--bgclr-main);
 }
 
