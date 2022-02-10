@@ -27,8 +27,21 @@ let operate = function(operator, a, b) {
 
 console.log(operate('+', 5, 5));
 
-const displayText = document.querySelector('.display');
+const displayArea = document.querySelector('.display');
+
+function display(number) {
+  if (displayArea.textContent == '0') {
+    displayArea.textContent = '';
+    displayArea.textContent += number;
+  } else (displayArea.textContent += number);
+}
 
 // Number Buttons //
 const number_buttons = document.querySelectorAll('.number');
-console.log(number_buttons);
+
+number_buttons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    console.log(e.target.value);
+    display(e.target.value);
+  })
+});

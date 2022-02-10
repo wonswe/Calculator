@@ -163,6 +163,8 @@ button {
   grid-area: equals;
 }
 
+/* Buttons */
+
 button {
   display: block;
   width: 100%;
