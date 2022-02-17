@@ -88,12 +88,19 @@ operator_buttons.forEach(button => {
 const equals_button = document.querySelector('#equals');
 
 equals_button.addEventListener('click', function() {
-  storage.n2 = parseInt(displayArea.textContent);
-  console.log(storage.n2);
-  storage.answer = operate(storage.operator, storage.n1, storage.n2);
-  clearDisplay();
-  console.log(storage.answer);
-  display(storage.answer);
+  if (storage.n1 == undefined) {
+    return;
+  } else if (!displayArea.textContent) {
+    display(storage.n1);
+  } else if (displayArea.textContent) {
+    storage.n2 = parseInt(displayArea.textContent);
+    console.log(storage.n2);
+    storage.answer = operate(storage.operator, storage.n1, storage.n2);
+    clearDisplay();
+    console.log(storage.answer);
+    console.table(storage);
+    display(storage.answer);
+  }
 })
 
 // Clear Button //
