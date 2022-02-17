@@ -27,10 +27,11 @@ let operate = function(operator, a, b) {
 
 // Initial Values //
 
-let input = {
+let storage = {
   n1: undefined,
   n2: undefined,
   operator: undefined,
+  answer: undefined,
 }
 
 // Display Numbers //
@@ -38,7 +39,7 @@ let input = {
 const displayArea = document.querySelector('.display');
 
 function display(number) {
-  if (displayArea.textContent == '0') {
+  if (displayArea.textContent == '0' || storage.answer == displayArea.textContent) {
     displayArea.textContent = '';
     displayArea.textContent += number;
   } else (displayArea.textContent += number);
@@ -63,10 +64,10 @@ const operator_buttons = document.querySelectorAll('.operator');
 
 operator_buttons.forEach(button => {
   button.addEventListener('click', (e) => {
-    input.operator = e.target.value;
-    input.n1 = parseInt(displayArea.textContent);
-    console.log(input.n1);
-    console.log(input.operator);
+    storage.operator = e.target.value;
+    storage.n1 = parseInt(displayArea.textContent);
+    console.log(storage.n1);
+    console.log(storage.operator);
     clearDisplay();
   })
 })
@@ -75,10 +76,10 @@ operator_buttons.forEach(button => {
 const equals_button = document.querySelector('#equals');
 
 equals_button.addEventListener('click', function() {
-  input.n2 = parseInt(displayArea.textContent);
-  console.log(input.n2);
-  answer = operate(input.operator, input.n1, input.n2);
+  storage.n2 = parseInt(displayArea.textContent);
+  console.log(storage.n2);
+  storage.answer = operate(storage.operator, storage.n1, storage.n2);
   clearDisplay();
-  console.log(answer);
-  display(answer);
+  console.log(storage.answer);
+  display(storage.answer);
 })
