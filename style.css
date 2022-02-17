@@ -52,10 +52,17 @@ button {
 }
 
 .display {
+  border: solid 1px white;
   color: #fff;
+  margin: 0;
+  padding: 5px 10px;
+  min-height: 46px;
+  max-height: 46px;
   font-size: 2rem;
   text-align: right;
-  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 /* Grid Container */
