@@ -92,6 +92,8 @@ equals_button.addEventListener('click', function() {
     return;
   } else if (!displayArea.textContent) {
     display(storage.n1);
+  } else if (displayArea.textContent == storage.answer) {
+    return;
   } else if (displayArea.textContent) {
     storage.n2 = parseInt(displayArea.textContent);
     console.log(storage.n2);
@@ -100,7 +102,7 @@ equals_button.addEventListener('click', function() {
     console.log(storage.answer);
     console.table(storage);
     display(storage.answer);
-  }
+  } 
 })
 
 // Clear Button //
