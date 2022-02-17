@@ -37,6 +37,15 @@ let storage = {
   answer: undefined,
 }
 
+// Initialize Values //
+function clear() {
+  storage.n1 = undefined;
+  storage.n2 = undefined;
+  storage.operator = undefined;
+  storage.answer = undefined;
+  displayArea.textContent = '0';
+}
+
 // Display Numbers //
 
 const displayArea = document.querySelector('.display');
@@ -86,3 +95,8 @@ equals_button.addEventListener('click', function() {
   console.log(storage.answer);
   display(storage.answer);
 })
+
+// Clear Button //
+const clear_button = document.querySelector('#clear');
+
+clear_button.addEventListener('click', clear);
