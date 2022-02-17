@@ -19,13 +19,21 @@ function divide(a, b) {
 // Operate() Function
 
 let operate = function(operator, a, b) {
-  if (operator == '+') return add(a, b);
-  else if (operator == '-') return subtract(a, b);
-  else if (operator == '*') return multiply(a, b);
-  else if (operator == '/') return divide(a, b);
+  if (operator == 'plus') return add(a, b);
+  else if (operator == 'minus') return subtract(a, b);
+  else if (operator == 'multiply') return multiply(a, b);
+  else if (operator == 'divide') return divide(a, b);
 }
 
-console.log(operate('+', 5, 5));
+// Initial Values //
+
+let input = {
+  n1: undefined,
+  n2: undefined,
+  operator: undefined,
+}
+
+// Display Numbers //
 
 const displayArea = document.querySelector('.display');
 
@@ -36,12 +44,41 @@ function display(number) {
   } else (displayArea.textContent += number);
 }
 
+function clearDisplay() {
+  displayArea.textContent = '';
+}
+
 // Number Buttons //
 const number_buttons = document.querySelectorAll('.number');
 
 number_buttons.forEach(button => {
   button.addEventListener('click', (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
     display(e.target.value);
   })
 });
+
+// Operator Buttons //
+const operator_buttons = document.querySelectorAll('.operator');
+
+operator_buttons.forEach(button => {
+  button.addEventListener('click', (e) => {
+    input.operator = e.target.value;
+    input.n1 = parseInt(displayArea.textContent);
+    console.log(input.n1);
+    console.log(input.operator);
+    clearDisplay();
+  })
+})
+
+// Equals Button //
+const equals_button = document.querySelector('#equals');
+
+equals_button.addEventListener('click', function() {
+  input.n2 = parseInt(displayArea.textContent);
+  console.log(input.n2);
+  answer = operate(input.operator, input.n1, input.n2);
+  clearDisplay();
+  console.log(answer);
+  display(answer);
+})
