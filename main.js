@@ -137,3 +137,18 @@ let percent = function(a) {
 // Percent Button //
 const percent_button = document.querySelector('#percent');
 percent_button.addEventListener('click', percent);
+
+// plusMinus() Function //
+function plusMinus() {
+  if(displayArea.textContent == '0') {
+    return;
+  } else if (displayArea.textContent.includes('-')) {
+    displayArea.textContent = displayArea.textContent.slice(1);
+  } else {
+    displayArea.textContent = `-${displayArea.textContent}`;
+  }
+}
+
+// PlusMinus Button //
+const plusminus_button = document.querySelector('#plusminus');
+plusminus_button.addEventListener('click', plusMinus);
