@@ -43,7 +43,9 @@ function clear() {
   storage.n2 = undefined;
   storage.operator = undefined;
   storage.answer = undefined;
+  displayArea.textContent = '';
   displayArea.textContent = '0';
+  point_button.addEventListener('click', addFloat);
 }
 
 // Display Numbers //
@@ -77,9 +79,10 @@ const operator_buttons = document.querySelectorAll('.operator');
 operator_buttons.forEach(button => {
   button.addEventListener('click', (e) => {
     storage.operator = e.target.value;
-    storage.n1 = parseInt(displayArea.textContent);
+    storage.n1 = parseFloat(displayArea.textContent);
     console.log(storage.n1);
     console.log(storage.operator);
+    point_button.addEventListener('click', addFloat);
     clearDisplay();
   })
 })
@@ -95,7 +98,7 @@ equals_button.addEventListener('click', function() {
   } else if (displayArea.textContent == storage.answer) {
     return;
   } else if (displayArea.textContent) {
-    storage.n2 = parseInt(displayArea.textContent);
+    storage.n2 = parseFloat(displayArea.textContent);
     console.log(storage.n2);
     storage.answer = operate(storage.operator, storage.n1, storage.n2);
     clearDisplay();
@@ -109,3 +112,13 @@ equals_button.addEventListener('click', function() {
 const clear_button = document.querySelector('#clear');
 
 clear_button.addEventListener('click', clear);
+
+// Floating Point Button //
+const point_button = document.querySelector('#point');
+point_button.addEventListener('click', addFloat);
+
+// Add Floating Point Function //
+function addFloat() {
+  displayArea.textContent += '.';
+  point_button.removeEventListener('click', addFloat)
+}
