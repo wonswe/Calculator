@@ -37,13 +37,18 @@ let storage = {
   answer: undefined,
 }
 
+// Clear Display //
+function clearDisplay() {
+  displayArea.textContent = '';
+}
+
 // Initialize Values //
 function clear() {
   storage.n1 = undefined;
   storage.n2 = undefined;
   storage.operator = undefined;
   storage.answer = undefined;
-  displayArea.textContent = '';
+  clearDisplay();
   displayArea.textContent = '0';
   point_button.addEventListener('click', addFloat);
 }
@@ -54,14 +59,11 @@ const displayArea = document.querySelector('.display');
 
 function display(number) {
   if (displayArea.textContent == '0' || storage.answer == displayArea.textContent) {
-    displayArea.textContent = '';
+    clearDisplay();
     displayArea.textContent += number;
   } else (displayArea.textContent += number);
 }
 
-function clearDisplay() {
-  displayArea.textContent = '';
-}
 
 // Number Buttons //
 const number_buttons = document.querySelectorAll('.number');
@@ -122,3 +124,16 @@ function addFloat() {
   displayArea.textContent += '.';
   point_button.removeEventListener('click', addFloat)
 }
+
+// Percent() Function 
+let percent = function(a) {
+  storage.n1 = parseFloat(displayArea.textContent);
+  storage.answer = storage.n1 / 100;
+  clearDisplay(); 
+  display(storage.answer);
+  console.table(storage);
+}
+
+// Percent Button //
+const percent_button = document.querySelector('#percent');
+percent_button.addEventListener('click', percent);
