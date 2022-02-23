@@ -70,7 +70,6 @@ const number_buttons = document.querySelectorAll('.number');
 
 number_buttons.forEach(button => {
   button.addEventListener('click', (e) => {
-    // console.log(e.target.value);
     display(e.target.value);
   })
 });
@@ -153,3 +152,18 @@ function plusMinus() {
 // PlusMinus Button //
 const plusminus_button = document.querySelector('#plusminus');
 plusminus_button.addEventListener('click', plusMinus);
+
+// Backspace() Function //
+function backspace() {
+  if (displayArea.textContent == '0') {
+    return
+  } else if (displayArea.textContent == '') {
+    displayArea.textContent = '0';
+  } else {
+    displayArea.textContent = displayArea.textContent.slice(0, -1);
+  }
+}
+
+// Backspace Button //
+const backspace_button = document.querySelector('#backspace');
+backspace_button.addEventListener('click', backspace);
