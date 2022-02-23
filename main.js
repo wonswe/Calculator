@@ -103,6 +103,7 @@ equals_button.addEventListener('click', function() {
     storage.n2 = parseFloat(displayArea.textContent);
     console.log(storage.n2);
     storage.answer = operate(storage.operator, storage.n1, storage.n2);
+    storage.answer = +storage.answer.toFixed(5);
     clearDisplay();
     console.log(storage.answer);
     console.table(storage);
