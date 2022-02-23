@@ -1,5 +1,9 @@
 :root {
-  --bgclr-main: #8fbedf;
+  --clr-yellow: #ecc75dff;
+  --clr-red: #d14f45ff;
+  --clr-white: #f0f1f3ff;
+  --clr-skyblue: #8fbedf;
+  --clr-darknavy: #17313fff;
 }
 
 *,
@@ -11,7 +15,7 @@
 body,
 button {
   margin: 0;
-  background-color: var(--bgclr-main);
+  background-color: var(--clr-skyblue);
   font-family: 'Balsamiq Sans';
 }
 
