@@ -47,21 +47,28 @@ button {
   margin-bottom: 1em;
 }
 
+/* Top Section */
+.top-section {
+  display: flex;
+  margin: 0 15px;
+}
+
 /* Calculator Display */
 .display-container {
   border: solid 1px white;
-  margin: 0 15px;
+  margin: auto 10px auto 0;
   padding: 10px;
-  min-height: 61px;
+  max-width: 259px;
+  height: 80px;
+  flex-grow: 1;
 }
 
 .display {
   border: solid 1px white;
   color: #fff;
-  margin: 0;
-  padding: 5px 10px;
-  min-height: 46px;
-  max-height: 46px;
+  margin: auto 0;
+  padding: 10px;
+  height: 55px;
   font-size: 2rem;
   text-align: right;
   white-space: nowrap;
@@ -186,4 +193,9 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+#backspace-button {
+  width: 80px;
+  height: 80px;
 }
