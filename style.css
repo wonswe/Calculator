@@ -4,6 +4,8 @@
   --clr-white: #f0f1f3ff;
   --clr-skyblue: #8fbedf;
   --clr-darknavy: #17313fff;
+  --clr-darkgray: rgb(110, 110, 110);
+  --bg-clr: rgb(201, 201, 201);
 }
 
 *,
@@ -12,15 +14,15 @@
   box-sizing: border-box;
 }
 
-body,
-button {
+body {
   margin: 0;
-  background-color: var(--clr-skyblue);
+  background-color: var(--bg-clr);
   font-family: 'Balsamiq Sans';
 }
 
 button {
   font-size: 2.5rem;
+  font-family: 'Balsamiq Sans';
   color: #fff;
 }
 
@@ -34,17 +36,19 @@ button {
 }
 
 .inner-container {
+  background-color: var(--clr-white);
   border: #fff solid 1px;
   width: 380px;
   margin: 0 auto;
-  padding-top: 25px;
+  padding-top: 18px;
 }
 
 .title {
   color: #fff;
   font-size: 4rem;
   text-align: center;
-  margin-bottom: 1em;
+  margin-top: 1em;
+  margin-bottom: 0.8em;
 }
 
 /* Top Section */
@@ -55,7 +59,8 @@ button {
 
 /* Calculator Display */
 .display-container {
-  border: solid 1px white;
+  border: solid 1px var(--clr-darkgray);
+  background-color: var(--clr-darkgray);
   margin: auto 10px auto 0;
   padding: 10px;
   max-width: 259px;
@@ -64,12 +69,11 @@ button {
 }
 
 .display {
-  border: solid 1px white;
   color: #fff;
   margin: auto 0;
   padding: 10px;
   height: 55px;
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: right;
   white-space: nowrap;
   overflow: hidden;
@@ -188,14 +192,37 @@ button {
   display: block;
   width: 100%;
   height: 100%;
-  /* border: none; */
+  border: solid white 1px;
 }
 
 button:hover {
   cursor: pointer;
+  opacity: 90%;
+}
+
+button:active {
+  font-size: 2.8rem;
 }
 
 #backspace {
   width: 80px;
   height: 80px;
+  background-color: var(--clr-darknavy);
+}
+
+#backspace {
+  background-color: var(--clr-red);
+}
+
+.operator,
+#equals {
+  background-color: var(--clr-yellow);
+}
+
+.number,
+#point,
+#plusminus,
+#percent,
+#clear {
+  background-color: var(--clr-skyblue);
 }
