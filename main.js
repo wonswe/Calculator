@@ -158,6 +158,10 @@ function backspace() {
     return
   } else if (displayArea.textContent == '') {
     displayArea.textContent = '0';
+  } else if (displayArea.textContent == "NaN") {
+    displayArea.textContent = '0';
+  } else if (displayArea.textContent == "noot!") {
+    displayArea.textContent = '0';
   } else {
     displayArea.textContent = displayArea.textContent.slice(0, -1);
   }
