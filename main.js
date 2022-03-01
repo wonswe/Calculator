@@ -83,7 +83,6 @@ operator_buttons.forEach(button => {
     storage.n1 = parseFloat(displayArea.textContent);
     console.log(storage.n1);
     console.log(storage.operator);
-    point_button.addEventListener('click', addFloat);
     clearDisplay();
   })
 })
