@@ -5,7 +5,7 @@
   --clr-skyblue: #8fbedf;
   --clr-darknavy: #17313fff;
   --clr-darkgray: rgb(110, 110, 110);
-  --bg-clr: rgb(201, 201, 201);
+  --bg-clr: rgb(34, 34, 34);
 }
 
 *,
@@ -59,8 +59,8 @@ button {
 
 /* Calculator Display */
 .display-container {
-  border: solid 1px var(--clr-darkgray);
-  background-color: var(--clr-darkgray);
+  border: solid 1px var(--clr-darknavy);
+  background-color: var(--clr-darknavy);
   margin: auto 10px auto 0;
   padding: 10px;
   max-width: 259px;
