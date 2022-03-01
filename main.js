@@ -120,8 +120,11 @@ point_button.addEventListener('click', addFloat);
 
 // Add Floating Point Function //
 function addFloat() {
-  displayArea.textContent += '.';
-  point_button.removeEventListener('click', addFloat)
+  if (displayArea.textContent.includes(".")) {
+    return;
+  } else {
+    displayArea.textContent += '.';
+  }
 }
 
 // Percent() Function 
