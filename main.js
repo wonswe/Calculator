@@ -50,7 +50,6 @@ function clear() {
   storage.answer = undefined;
   clearDisplay();
   displayArea.textContent = '0';
-  point_button.addEventListener('click', addFloat);
 }
 
 // Display Numbers //
