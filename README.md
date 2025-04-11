@@ -1,3 +1,3 @@
 # Calculator
 
-LIVE: https://wonswe.github.io/calculator/
+LIVE: https://wonswe.github.io/Calculator/
